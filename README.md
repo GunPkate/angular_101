@@ -1,5 +1,43 @@
 # Hotelinventoryapp
 
+## Start
+
+```
+ng new ${name}
+//create default project
+
+ng new ${name}--createApplication=false
+//no project
+ng g app ${name}
+//add project
+
+ng serve -o
+//run locally
+```
+
+| file (part1)   | description                                                                       |
+| -------------- | --------------------------------------------------------------------------------- |
+| ts.config-spec | for unit testing                                                                  |
+| karma.conf.js  | when dev with team log history                                                    |
+| polyfil        | convert code to different js version                                              |
+|                | (some old browser doest not support latest feature polyfil will cover this issue) |
+| main.ts        | like public static void main in Java everything start here                        |
+| favicon        | logo in brower's tap title                                                        |
+|                |                                                                                   |
+
+mono-repo = multi project(app) in one workspace (share coding between projects)
+
+| file (part2)    | description                                                                              |
+| --------------- | ---------------------------------------------------------------------------------------- |
+| Angular.json    | description types names and root file                                                    |
+|                 | options (mapping) bundle of code when deploy                                             |
+| bootstrapModule | start project by module                                                                  |
+| AppModule       | Main Class can contain other 3rd libraries or other angular libs                         |
+|                 | to use such libs (components directives pipes) must be import and registered by declared |
+| @NgModule       | contains every modules which is being used and give to compiler                          |
+| @NgModule       | typescript decorator => modify behavior of class (components and modules) => compiler    |
+| AppComponent    | View will be rendered to end users by html Tag                                           |
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
 ## Development server
