@@ -3,13 +3,17 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'hinv-rooms',
   templateUrl: './rooms.component.html',
-  styleUrls: ['./rooms.component.scss']
+  styleUrls: ['./rooms.component.scss'],
 })
 export class RoomsComponent implements OnInit {
+  hotelsName = 'Hiltons';
+  numbersOfRooms = 10;
+  constructor() {}
 
-  constructor() { }
+  hideRooms = false;
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  toggle() {
+    this.hideRooms = !this.hideRooms;
   }
-
 }

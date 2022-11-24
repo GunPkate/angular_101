@@ -29,7 +29,7 @@ mono-repo = multi project(app) in one workspace (share coding between projects)
 
 | file (part2)    | description                                                                              |
 | --------------- | ---------------------------------------------------------------------------------------- |
-| Angular.json    | description types names and root file prefix(start name of component)                                                   |
+| Angular.json    | description types names and root file prefix(start name of component)                    |
 |                 | options (mapping) bundle of code when deploy                                             |
 | bootstrapModule | start project by module                                                                  |
 | AppModule       | Main Class can contain other 3rd libraries or other angular libs                         |
@@ -37,6 +37,18 @@ mono-repo = multi project(app) in one workspace (share coding between projects)
 | @NgModule       | contains every modules which is being used and give to compiler                          |
 | @NgModule       | typescript decorator => modify behavior of class (components and modules) => compiler    |
 | AppComponent    | View will be rendered to end users by html Tag                                           |
+
+roomsComponent add function and databinding
+
+<h1>Welcome to {{hotelsName}}</h1>
+<div [hidden]="hideRooms">
+    Numbers of Romms:
+    <div [innerText]="numbersOfRooms"></div>
+</div>
+<button (click)="toggle()">Hide</button>
+<!-- document.getElemntById('numbersOfRooms').innerText = numbersOfRooms -->
+
+databinding can be done in 2 ways
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
