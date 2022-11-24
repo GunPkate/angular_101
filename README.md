@@ -15,21 +15,21 @@ ng serve -o
 //run locally
 ```
 
-| file (part1)   | description                                                                       |
-| -------------- | --------------------------------------------------------------------------------- |
-| ts.config-spec | for unit testing                                                                  |
-| karma.conf.js  | when dev with team log history                                                    |
-| polyfil        | convert code to different js version                                              |
-|                | (some old browser doest not support latest feature polyfil will cover this issue) |
-| main.ts        | like public static void main in Java everything start here                        |
-| favicon        | logo in brower's tap title                                                        |
-|                |                                                                                   |
+| file (part1)   | description                                                                      |
+| -------------- | -------------------------------------------------------------------------------- |
+| ts.config-spec | for unit testing                                                                 |
+| karma.conf.js  | when dev with team log history                                                   |
+| polyfil        | convert code to different js version                                             |
+|                | (some old browser does not support latest feature polyfil will cover this issue) |
+| main.ts        | like public static void main in Java everything start here                       |
+| favicon        | logo in brower's tap title                                                       |
+|                |                                                                                  |
 
 mono-repo = multi project(app) in one workspace (share coding between projects)
 
 | file (part2)    | description                                                                              |
 | --------------- | ---------------------------------------------------------------------------------------- |
-| Angular.json    | description types names and root file                                                    |
+| Angular.json    | description types names and root file prefix(start name of component)                                                   |
 |                 | options (mapping) bundle of code when deploy                                             |
 | bootstrapModule | start project by module                                                                  |
 | AppModule       | Main Class can contain other 3rd libraries or other angular libs                         |

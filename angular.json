@@ -18,7 +18,7 @@
       },
       "root": "projects/hotelinventory",
       "sourceRoot": "projects/hotelinventory/src",
-      "prefix": "app",
+      "prefix": "hinv",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
