@@ -3,5 +3,34 @@
     Numbers of Romms:
     <div [innerText]="numbersOfRooms"></div>
 </div>
+
+{{rooms?.availableRooms ?? 'No rooms'}}
+<!-- <div *ngIf="rooms.availableRooms > 0"> -->
+<div *ngIf="(rooms.availableRooms )">
+    Room List
+    <!-- {{roomsList}} -->
+    <table>
+        <tr>
+            <th>Index</th>
+            <th>Even/Odd</th>
+            <th>RoomType         </th>
+            <th>amendities       </th>
+            <th>price        </th>
+            <th>photos       </th>
+            <th>checkInTime      </th>   
+            <th>checkOutTime         </th>     
+        </tr>
+        <tr *ngFor="let room of roomsList; let e =even; let o = odd; let i =index;">
+            <td>{{i}}</td>
+            <td>{{e?"Even":"Odd"}}</td>
+            <td>{{room.RoomType}}</td>
+            <td>{{room.amendities}}</td>
+            <td>{{room.price}}</td>
+            <td>{{room.photos}}</td>
+            <td>{{room.checkInTime}}</td>
+            <td>{{room.checkOutTime}}</td>
+        </tr>
+    </table>
+</div>
 <button (click)="toggle()">Hide</button>
 <!-- document.getElemntById('numbersOfRooms').innerText = numbersOfRooms -->

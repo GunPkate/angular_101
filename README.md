@@ -50,6 +50,14 @@ roomsComponent add function and databinding
 
 databinding can be done in 2 ways
 
+Directive (structure and attribute)
+-controll DOM element
+-hook lifecycle
+-no template
+
+ngIf
+ngFor optional chaining and null collision
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
 ## Development server
