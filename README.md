@@ -114,7 +114,27 @@ When we get data from API, we have to change format before showing on frontend
             <td>{{room.checkOutTime | date}}</td>
             <td>{{room.rating | number :'1.1-2'}}</td>
 ```
+
 ![image](https://user-images.githubusercontent.com/77183620/203937666-c48c0fcd-5bc8-4488-a42b-7824286256db.png)
+
+https://valor-software.com/ngx-bootstrap/#/documentation
+https://ng-bootstrap.github.io/#/getting-started
+
+```
+ng add ngx-bootstrap
+npm i bootstrap
+```
+
+path ~\node_modules\bootstrap\dist\js\bootstrap.min.js
+
+angular.json
+
+```
+            "styles": [
+              "projects/hotelinventory/src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.rtl.min.css"
+            ],
+```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 

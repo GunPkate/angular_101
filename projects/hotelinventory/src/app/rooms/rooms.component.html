@@ -1,4 +1,7 @@
 <h1>Welcome to {{hotelsName}}</h1>
+<div class="container">
+
+
 <div [hidden]="hideRooms">
     Numbers of Romms:
     <div [ngStyle]="{color: rooms.availableRooms?'green':'red'}"[innerText]="numbersOfRooms" style="font-size: larger;"></div>
@@ -35,5 +38,6 @@
         </tr>
     </table>
 </div>
-<button (click)="toggle()">Hide</button>
+<button class="col-12" (click)="toggle()">Hide</button>
+</div>
 <!-- document.getElemntById('numbersOfRooms').innerText = numbersOfRooms -->

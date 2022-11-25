@@ -34,7 +34,8 @@
               "projects/hotelinventory/src/assets"
             ],
             "styles": [
-              "projects/hotelinventory/src/styles.scss"
+              "projects/hotelinventory/src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.rtl.min.css"
             ],
             "scripts": []
           },
