@@ -38,7 +38,7 @@ mono-repo = multi project(app) in one workspace (share coding between projects)
 | @NgModule       | typescript decorator => modify behavior of class (components and modules) => compiler    |
 | AppComponent    | View will be rendered to end users by html Tag                                           |
 
-roomsComponent add function and databinding
+## roomsComponent add function and databinding
 
 ```
 <h1>Welcome to {{hotelsName}}</h1>
@@ -50,14 +50,15 @@ roomsComponent add function and databinding
 <!-- document.getElemntById('numbersOfRooms').innerText = numbersOfRooms -->
 ```
 
-databinding can be done in 2 ways
+## databinding can be done in 2 ways
 
 Directive (structure and attribute)
 -controll DOM element
 -hook lifecycle
 -no template
 
-ngIf
+## ngIf
+
 \*ngFor optional chaining and null collision
 
 ```
@@ -73,7 +74,7 @@ ngIf
         </tr>
 ```
 
-ngSwitch
+## ngSwitch
 
 app.components.html
 
@@ -92,13 +93,14 @@ attribute directive can not add/remove element from dom
 result
 image...
 
-ngStyle
+## ngStyle
 
 ```
     <div [ngStyle]="{color: rooms.availableRooms?'green':'red'}"[innerText]="numbersOfRooms" style="font-size: larger;"></div>
 ```
 
-pipes(Data transformation)
+## pipes(Data transformation)
+
 When we get data from API, we have to change format before showing on frontend
 (Object dont change)
 
@@ -116,6 +118,8 @@ When we get data from API, we have to change format before showing on frontend
 ```
 
 ![image](https://user-images.githubusercontent.com/77183620/203937666-c48c0fcd-5bc8-4488-a42b-7824286256db.png)
+
+## Bootstrap
 
 https://valor-software.com/ngx-bootstrap/#/documentation
 https://ng-bootstrap.github.io/#/getting-started
@@ -135,6 +139,50 @@ angular.json
               "node_modules/bootstrap/dist/css/bootstrap.rtl.min.css"
             ],
 ```
+
+## lifecycle hook
+
+render component(View) => constructor(inject service) => ngOninit(logic for current component)
+#components' communication => reusable tag
+
+-@input @output
+roomlist => childcomponent
+room => parentcomponent
+
+# input
+
+```
+@Input() rooms: RoomList[] = [];
+//input roomslist.component.ts
+roomlist.html
+
+<hinv-roomlist [rooms] = "roomsList"></hinv-roomlist>
+// rooms.component.ts
+```
+
+# output
+
+```
+  @Output() selectedRoom = new EventEmitter<RoomList>();
+  //output roomslist.component.ts
+
+  roomSelected(room: RoomList) {
+    this.selectedRoom.emit(room);
+  } // event click
+
+  (selectedRoom)="roomSelected($event)"
+  //output rooms.component.html
+
+  selectedRoom!: RoomList;
+  roomSelected(room: RoomList) {
+    console.log(room);
+    this.selectedRoom = room
+  }
+  //output rooms.component.ts
+```
+
+-@Viewchild @Contentchild
+-Services
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
