@@ -8,7 +8,7 @@
 <!-- <div *ngIf="rooms.availableRooms > 0"> -->
 <div *ngIf="(rooms.availableRooms>0 )">
     Room List
-    <!-- {{roomsList}} -->
+    {{roomsList | json}}
     <table>
         <tr>
             <th>Index</th>
@@ -16,19 +16,22 @@
             <th>RoomType         </th>
             <th>amendities       </th>
             <th>price        </th>
-            <th>photos       </th>
+            <!-- <th>photos       </th> -->
             <th>checkInTime      </th>   
             <th>checkOutTime         </th>     
+            <th>Rating         </th>     
         </tr>
-        <tr [ngClass]="e? 'even': 'odd'" *ngFor="let room of roomsList; let e =even; let o = odd; let i =index;">
+        <tr [ngClass]="e? 'even': 'odd' " *ngFor="let room of roomsList ; let e =even; let o = odd; let i =index;">
+        <!-- <tr [ngClass]="e? 'even': 'odd' " *ngFor="let room of roomsList  | slice : 0:1; let e =even; let o = odd; let i =index;"> -->
             <td>{{i}}</td>
             <td>{{e?"Even":"Odd"}}</td>
             <td>{{room.RoomType}}</td>
-            <td>{{room.amendities}}</td>
-            <td>{{room.price}}</td>
-            <td>{{room.photos}}</td>
-            <td>{{room.checkInTime}}</td>
-            <td>{{room.checkOutTime}}</td>
+            <td>{{room.amendities | lowercase}}</td>
+            <td>{{room.price | currency}}</td>
+            <!-- <td>{{room.photos}}</td> -->
+            <td>{{room.checkInTime | date :"medium"}}</td>
+            <td>{{room.checkOutTime | date}}</td>
+            <td>{{room.rating | number :'1.1-2'}}</td>
         </tr>
     </table>
 </div>

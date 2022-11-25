@@ -40,6 +40,7 @@ mono-repo = multi project(app) in one workspace (share coding between projects)
 
 roomsComponent add function and databinding
 
+```
 <h1>Welcome to {{hotelsName}}</h1>
 <div [hidden]="hideRooms">
     Numbers of Romms:
@@ -47,6 +48,7 @@ roomsComponent add function and databinding
 </div>
 <button (click)="toggle()">Hide</button>
 <!-- document.getElemntById('numbersOfRooms').innerText = numbersOfRooms -->
+```
 
 databinding can be done in 2 ways
 
@@ -94,6 +96,23 @@ ngStyle
 
 ```
     <div [ngStyle]="{color: rooms.availableRooms?'green':'red'}"[innerText]="numbersOfRooms" style="font-size: larger;"></div>
+```
+
+pipes(Data transformation)
+When we get data from API, we have to change format before showing on frontend
+(Object dont change)
+
+```
+        <!-- <tr [ngClass]="e? 'even': 'odd' " *ngFor="let room of roomsList  | slice : 0:1; let e =even; let o = odd; let i =index;"> -->
+            <td>{{i}}</td>
+            <td>{{e?"Even":"Odd"}}</td>
+            <td>{{room.RoomType}}</td>
+            <td>{{room.amendities | lowercase}}</td>
+            <td>{{room.price | currency}}</td>
+            <!-- <td>{{room.photos}}</td> -->
+            <td>{{room.checkInTime | date :"medium"}}</td>
+            <td>{{room.checkOutTime | date}}</td>
+            <td>{{room.rating | number :'1.1-2'}}</td>
 ```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.

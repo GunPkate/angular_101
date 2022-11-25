@@ -24,6 +24,7 @@ export class RoomsComponent implements OnInit {
         'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
       checkInTime: new Date('11-Nov-2021'),
       checkOutTime: new Date('12-Nov-2021'),
+      rating: 5
     },
     {
       RoomType: 'Deluxe Room',
@@ -33,6 +34,7 @@ export class RoomsComponent implements OnInit {
         'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
       checkInTime: new Date('11-Nov-2021'),
       checkOutTime: new Date('12-Nov-2021'),
+      rating: 4.77
     },
     {
       RoomType: 'Private Suite',
@@ -42,6 +44,7 @@ export class RoomsComponent implements OnInit {
         'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
       checkInTime: new Date('11-Nov-2021'),
       checkOutTime: new Date('12-Nov-2021'),
+      rating: 4.819
     },
   ];
   constructor() {}
