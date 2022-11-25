@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   // <p>Yes</p>
   // `,
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
   // styles:[`h1 {color:red;}`]
 })
 export class AppComponent {
   title = 'hotelinventory';
+  role = 'Users';
 }

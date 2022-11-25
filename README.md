@@ -56,7 +56,45 @@ Directive (structure and attribute)
 -no template
 
 ngIf
-ngFor optional chaining and null collision
+\*ngFor optional chaining and null collision
+
+```
+        <tr *ngFor="let room of roomsList; let e =even; let o = odd; let i =index;">
+            <td>{{i}}</td>
+            <td>{{e?"Even":"Odd"}}</td>
+            <td>{{room.RoomType}}</td>
+            <td>{{room.amendities}}</td>
+            <td>{{room.price}}</td>
+            <td>{{room.photos}}</td>
+            <td>{{room.checkInTime}}</td>
+            <td>{{room.checkOutTime}}</td>
+        </tr>
+```
+
+ngSwitch
+
+app.components.html
+
+```
+<div [ngSwitch]="role">
+        <div *ngSwitchCase="'User'">Welcome Users</div>
+        <div *ngSwitchCase="'Admin'">
+            <hinv-rooms></hinv-rooms>
+        </div>
+        <div *ngSwitchDefault>Unauthorized</div>
+</div>
+```
+
+"\*" is structural directive can add/modify entire dom
+attribute directive can not add/remove element from dom
+result
+image...
+
+ngStyle
+
+```
+    <div [ngStyle]="{color: rooms.availableRooms?'green':'red'}"[innerText]="numbersOfRooms" style="font-size: larger;"></div>
+```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
