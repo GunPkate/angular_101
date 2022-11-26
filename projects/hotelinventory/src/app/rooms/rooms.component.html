@@ -11,11 +11,14 @@
 
 <!-- <div *ngIf="rooms.availableRooms > 0"> -->
 
-<div *ngIf="selectedRoom">{{selectedRoom | json}}</div>
-<div *ngIf="(rooms.availableRooms>0 )">
+<!-- <div *ngIf="selectedRoom">{{selectedRoom | json}}</div> -->
+<!-- <div *ngIf="(rooms.availableRooms>0 )"> -->
 Room List
-{{roomsList | json}}>
-</div>
+<!-- {{roomsList | json}}> -->
+<!-- </div> -->
+
+<button class="col-12 btn btn-primary" (click)="toggle()">Hide</button>
+<button class="col-12 btn btn-success" (click)="addRoom()">Add Room</button>
 
 <hinv-roomlist 
 [rooms] = "roomsList"
@@ -24,6 +27,6 @@ Room List
 </hinv-roomlist>
 
 
-<button class="col-12 btn btn-primary" (click)="toggle()">Hide</button>
+
 </div>
 <!-- document.getElemntById('numbersOfRooms').innerText = numbersOfRooms -->

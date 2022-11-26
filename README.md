@@ -184,6 +184,27 @@ roomlist.html
 -@Viewchild @Contentchild
 -Services
 
+## onChange Detection
+
+## immutability
+
+array.push modify roomList Properties (mutate) this.roomsList.push(room);
+
+changeStrategy.onPush
+immutability = return new instance (spread operator)
+
+1. data does not change internally
+2. data comes from parent component
+   state management ngx return new object
+
+```
+    this.roomsList = [...this.roomsList,room]
+```
+
+## ngOnchage
+
+ngOnchage + component with input only property
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
 ## Development server

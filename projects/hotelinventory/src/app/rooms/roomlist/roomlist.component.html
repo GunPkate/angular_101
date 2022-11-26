@@ -3,6 +3,7 @@
         <tr>
             <th>Index</th>
             <th>Even/Odd</th>
+            <th>RoomNumber         </th>
             <th>RoomType         </th>
             <th>amendities       </th>
             <th>price        </th>
@@ -16,7 +17,8 @@
         <!-- <tr [ngClass]="e? 'even': 'odd' " *ngFor="let room of rooms  | slice : 0:1; let e =even; let o = odd; let i =index;"> -->
             <td>{{i}}</td>
             <td>{{e?"Even":"Odd"}}</td>
-            <td>{{room.RoomType}}</td>
+            <td>{{room.roomNumber}}</td>
+            <td>{{room.roomType}}</td>
             <td>{{room.amendities | lowercase}}</td>
             <td>{{room.price | currency}}</td>
             <!-- <td>{{room.photos}}</td> -->
